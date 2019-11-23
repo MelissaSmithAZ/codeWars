@@ -40,7 +40,6 @@
 
 // }
 
-
 // accum('abc')
 
 // //creat a rectangle with ***** and letters from an array
@@ -100,7 +99,7 @@
 // }
 // old('cat', 3)
 
-// //or more generic return 
+// //or more generic return
 // var humanYearsCatYearsDogYears = function (y) {
 //     if (y == 1) return [1, 15, 15]
 //     if (y == 2) return [2, 24, 24]
@@ -112,14 +111,22 @@
 
 // The function takes a name as its only argument, and returns one of the following strings:
 
-// name + " plays banjo" 
+// name + " plays banjo"
 // name + " does not play banjo"
 // Names given are always valid strings.
 
 function banjoPlayer(str) {
-    return str.split(" ").map((letter, i) => {
-        str[0] === 'r' || str[0] === 'R' ? "plays banjso" : "does not play banjo"
-    })
+  return str.split(" ").map((letter, i) => {
+    str[0] === "r" || str[0] === "R" ? "plays banjso" : "does not play banjo";
+  });
 }
 
-banjoPlayer('rick')
+banjoPlayer("rick");
+
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+function highAndLow(numbers) {
+  numbers = numbers.split(" ");
+  return Math.max(...numbers);
+}
+highAndLow("1 2 3");
