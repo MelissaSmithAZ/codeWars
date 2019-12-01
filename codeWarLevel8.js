@@ -130,3 +130,22 @@ function highAndLow(numbers) {
   return Math.max(...numbers);
 }
 highAndLow("1 2 3");
+
+
+// given an array of integers, find the first missing positive integer,  in other words find the lowest positive integer that does not exist in the array.  the array can contain duplicates and neg numbers
+
+function missingPositive(arr) {
+  //we need to sort them as it could be in a wrong order of positive neg
+  const sortedArr = arr.sort()
+  //once sorted we want to loop through them
+  for (i = 0; i < sortedArr.length; i++) {
+    //saying if the first number and the next number subtracted do not equal 1 than return the first number plus one 
+    if (sortedArr[i] > 0 && sortedArr[i + 1] - arr[i + 1] !== sortedArr[i] + 1) {
+      return arr[i] + 1
+    }
+
+  }
+
+}
+
+missingPositive([3, 4, -1, 1])
